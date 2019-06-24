@@ -1,2 +1,2 @@
-key.js
-.DS_Store
+*key.js
+*.DS_Store
