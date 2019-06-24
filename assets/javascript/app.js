@@ -1,12 +1,19 @@
-
-var state = "";
-var name = ""; 
-var 
+$("#find-brewery").on("click", function(event) {
 
 
-var queryURL = "https://api.openbrewerydb.org/breweries";
-
-$.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function(response){});
+    event.preventDefault();
+    
+    
+    var city = $("#brewery-input").val().trim();
+    
+       var queryURL = "https://api.openbrewerydb.org/breweries?by_city=" + city;   
+           
+          $.ajax({
+            url: queryURL,
+            method: "GET"
+          }).then(function(response) {
+            console.log(response);
+            $("#brewery-view").text(JSON.stringify(response));
+          });
+        
+        });
