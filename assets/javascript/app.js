@@ -1,3 +1,6 @@
+var brewList = [];
+
+
 $("#find-brewery").on("click", function(event) {
 
 
@@ -25,14 +28,22 @@ $("#find-brewery").on("click", function(event) {
               for (var i = 0; i < result.length; i++){
               var location1 = result[i].latitude;
               var location2 = result[i].longitude;
+              var name = result[i].name;
+              var address = result[i].street;
               
-            console.log("this is your location: " + location1,location2);
+              brewList.push([name,address,location1,location2])
+              
+              // console.log(brewList)
+            console.log("this is your location: " + name,address,location1,location2);
             if (location1 && location2) {
                 $("#brewery-view").append("<p>" + location1 + " " + location2 + "</p>") 
             }
             
               }
-              
+          
+
+
+
           });
         
         });
