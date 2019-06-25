@@ -1,1 +1,71 @@
 
+
+ 
+    * body {
+            font: 50px;
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.8;
+            color: whitesmoke;
+        }
+        /* Google Map Area*/
+        p {
+            font-family: 'Raleway', sans-serif;
+            font-size: 50px;
+        }
+        
+        .margin {
+            
+            margin-bottom: 45px;
+        }
+
+        /* Beer Me Logo Location */
+        .bg-1 {
+            background-color: #080c0b;
+            color: #ffffff;
+            font-family: 'Raleway', sans-serif;
+            font: 50px;
+        }
+
+        .bg-2 {
+            background-color: #2f2f2f;
+            /* Dark grey */
+            color: #ffffff;
+            font-family: 'Raleway', sans-serif;
+            font: 50px;
+        }
+
+        .bg-3 {
+            background-color: #ffffff;
+            /* White */
+            color: #555555;
+            font-family: 'Raleway', sans-serif;
+            font: 50px;
+        }
+
+        .bg-4 {
+            background-color: #2f2f2f;
+            /* Black Gray */
+            color: #fff;
+            font-family: 'Raleway', sans-serif;
+            font: 50px;
+        }
+
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 20px;
+            letter-spacing: 5px;
+        }
+
+        .navbar-nav li a:hover {
+            color: #1abc9c !important;
+        }
+
