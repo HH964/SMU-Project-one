@@ -1,4 +1,4 @@
-var googleURL = 'https://maps.googleapis.com/maps/api/js?key=CANTHAVEMYKEYTROLLS';
+var googleURL = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA3SVRHtd9fyun6WGgFbLlKKnKGJ_9jl18';
 
 
 $.ajax({
