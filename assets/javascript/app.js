@@ -37,4 +37,3 @@ $("#find-brewery").on("click", function(event) {
         
         });
 
- 
