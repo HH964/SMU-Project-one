@@ -69,3 +69,11 @@
             color: #1abc9c !important;
         }
 
+        
+        #map {
+          height: 400px;  /* The height is 400 pixels */
+            width: 80%;  
+            align-content: center;
+        }
+       
+
