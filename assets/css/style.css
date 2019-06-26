@@ -75,7 +75,24 @@
             width: 100%;
           }
           /* Optional: Makes the sample page fill the window. */
-      \
 
-
-      
+        
+        input[type=text] {
+            padding:3px; 
+            border:1px solid white; 
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        input[type=submit]{
+            background-color: white;
+            border: 1px transparent;
+            color: black;
+            padding: 15px 10px;
+            text-align: center;
+            text-decoration: none;
+            /* display: inline-block; */
+            font-size: 13px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+        }
