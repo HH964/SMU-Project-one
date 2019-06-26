@@ -1,7 +1,8 @@
-var brewList = [];
+var locations = [];
+console.log(locations)
 
 
-$("#find-brewery").on("click", function(event) {
+$("#find-brewery").on("click", function event(event) {
 
 
     event.preventDefault();
@@ -23,7 +24,7 @@ $("#find-brewery").on("click", function(event) {
           $.ajax({
             url: queryURL,
             method: "GET"
-          }).then(function(response) {
+          }).then(function (response) {
               var result = response;
               for (var i = 0; i < result.length; i++){
               var location1 = result[i].latitude;
@@ -31,10 +32,10 @@ $("#find-brewery").on("click", function(event) {
               var name = result[i].name;
               var address = result[i].street;
               
-              brewList.push([name,address,location1,location2])
+              locations.push([name,address,location1,location2])
               
               // console.log(brewList)
-            console.log("this is your location: " + name,address,location1,location2);
+            // console.log("this is your location: " + name,address,location1,location2);
             if (location1 && location2) {
                 $("#brewery-view").append("<p>" + location1 + " " + location2 + "</p>") 
             }
@@ -49,8 +50,8 @@ $("#find-brewery").on("click", function(event) {
         });
 
 
-
-
+function getMap(){
+    
         
         var googleURL = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA3SVRHtd9fyun6WGgFbLlKKnKGJ_9jl18';
 
@@ -61,19 +62,19 @@ $("#find-brewery").on("click", function(event) {
             dataType: 'jsonp'
         }).then(function () {
             // 32.7767° N, 96.7970° W
+
+            
+
             var latitude = 32.7767;
             var longitude = -96.7970;
             var x = parseFloat(latitude);
             var y = parseFloat(longitude);
         
-            var locations = [
-                ['Preston Hollow Park', 32.8804037, -96.7952787],
-                ['Four Seasons', 32.864327, -96.95764]
-            ];
+           
         
             var latlng = new google.maps.LatLng(x, y);
             var myOptions = {
-                zoom: 10,
+                zoom: 5,
                 center: latlng,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
@@ -85,15 +86,32 @@ $("#find-brewery").on("click", function(event) {
         
             for (i = 0; i < locations.length; i++) {
                 marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    position: new google.maps.LatLng(locations[i][2], locations[i][3]),
                     map: map
                 });
         
                 google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    var x = "<h1>" + locations[i][0] + "</h1>" + "<p>" + locations[i][1]  + "</p>";
+                    // console.log(x);
                     return function () {
-                        infowindow.setContent(locations[i][0]);
+                        // console.log(x);
+                
+                        infowindow.setContent(x);
                         infowindow.open(map, marker);
                     }
                 })(marker, i));
             };
         });
+}
+getMap()
+var interval =  setInterval(function(){
+    getMap()
+    if(locations !== 'undefined'){
+        clearI();
+    }
+},6000)
+
+
+function clearI(){
+    clearInterval(interval)
+}
