@@ -77,13 +77,15 @@
         
         input[type=text] {
             padding:3px; 
-            border:1px solid white; 
+            color: white;
+            background-color: lightgray;
+            border:1px solid grey; 
             -webkit-border-radius: 5px;
             border-radius: 5px;
             text-align: center;
         }
         input[type=submit]{
-            background-color: white;
+            background-color: lightgray;
             border: 1px transparent;
             color: black;
             padding: 15px 10px;
