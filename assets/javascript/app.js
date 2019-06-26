@@ -35,7 +35,7 @@ $("#find-brewery").on("click", function event(event) {
               locations.push([name,address,location1,location2])
               
               // console.log(brewList)
-            console.log("this is your location: " + name,address,location1,location2);
+            // console.log("this is your location: " + name,address,location1,location2);
             if (location1 && location2) {
                 $("#brewery-view").append("<p>" + location1 + " " + location2 + "</p>") 
             }
@@ -74,7 +74,7 @@ function getMap(){
         
             var latlng = new google.maps.LatLng(x, y);
             var myOptions = {
-                zoom: 10,
+                zoom: 5,
                 center: latlng,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
@@ -91,8 +91,12 @@ function getMap(){
                 });
         
                 google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    var x = "<h1>" + locations[i][0] + "</h1>" + "<p>" + locations[i][1]  + "</p>";
+                    // console.log(x);
                     return function () {
-                        infowindow.setContent(locations[i][0][1]);
+                        // console.log(x);
+                
+                        infowindow.setContent(x);
                         infowindow.open(map, marker);
                     }
                 })(marker, i));
@@ -105,7 +109,7 @@ var interval =  setInterval(function(){
     if(locations !== 'undefined'){
         clearI();
     }
-},5000)
+},6000)
 
 
 function clearI(){
