@@ -1,84 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-
     <title>Beer Me Home Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-    
-    
-
-    
-             
-
-
-
 </head>
-
 <body>
-    
-
-
     <!-- Navbar -->
-    <nav class="navbar navbar-default">
-        <div class="container">
+    <nav class="navbar navbar-default ">
+        <div class="container ">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Home</a>
+                <a class="navbar-brand" href="#index.html" id="home">Home</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Search</a></li>
-                    <li><a href="#">Map</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#search">Search</a></li>
+                    <li><a href="#aboutTeam">Our Team</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-
-
-    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-            <header class="modal__header">
-              <h2 class="modal__title" id="modal-1-title">
-                Micromodal
-              </h2>
-              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-            </header>
-            <main class="modal__content" id="modal-1-content">
-              <p>
-                Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also, <code>esc</code> to close modal.
-              </p>
-            </main>
-            <footer class="modal__footer">
-              <button class="modal__btn modal__btn-primary">Continue</button>
-              <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
-            </footer>
-          </div>
-        </div>
-      </div>
-
     <!-- First Container -->
     <div class="container-fluid bg-1 text-center">
         <!-- <h3 class="margin">Beer Me</h3> -->
         <img src="assets/images/logo-banner.png" class="img-responsive" style="display:inline" alt="beer">
-        
-    </div>
 
+    </div>
+    <!-- Second Container: ABOUT -->
+    <div class="container-fluid bg-3 text-center" id="about">
+        <h3 class="margin">What's Beer Me all About?</h3>
+        <p style="text-align:center">Do you enjoy delicious craft beer? Are you in search of a local brewery, or maybe
+            just a new spot to pass
+            time with like-minded beer lovers? We have just the thing for you then...</p>
+        <p style="text-align:center"> WELCOME to BEER ME! From a love
+            of beer and tech, we have collaborated to create something that any beer enthusiasts will love. Our goal is
+            to enhance the community of craft beer enthusiasts so that more people get to experience
+            great beer and the people who make it. Let us help you discover your new favorite local brewery!</p>
+        <br>
+    </div>
     <!-- Second Container -->
     <!-- <div class="container-fluid bg-2 text-center">
         <h3 class="margin">Search:</h3>
@@ -88,70 +60,64 @@
             <input type="text" id="brewery-input"><br>
             <input id="find-brewery" type="submit" value="brewery Search">
         </form>
-
         <div id="brewery-view"></div> -->
-
-
-
     <!-- </div> -->
-<div class="container-fluid bg-2 text-center">
-        <h3 class="margin">Search for Beer near you:</h3>
-    
-      
-      <form id="brewery-form"></form>
-      
-      
-        
+
+    <div class="container-fluid bg-2 text-center" id="search">
+        <h3 class="margin">Search for a Brewery near you:</h3>
+        <br>
+        <form id="brewery-form"></form>
+
         <label for="brewery-city-input"></label>
         <input type="text" id="brewery-input-city" placeholder="Search By City "><br><br>
         <label for="brewery-state-input"></label>
         <input type="text" id="brewery-input-state" placeholder="Search By State "><br>
-  
         <br>
-       
         <input id="find-brewery" type="submit" value="Brewery Search">
-      </form>
-      
-      <br><br>
-<div id="map"></div>
-  
-      <div id="brewery-view"></div> 
-      </div>
-
-     
-     
-        
-      
-
-
+        </form>
+        <br>
+        <br><br>
+        <div id="map"></div>
+        <div id="brewery-view"></div>
+    </div>
     <!-- Third Container -->
-    <div class="container-fluid bg-3 text-center">
-        <h3 class="margin">About Section:</h3><br>
+    <!-- <div class="container-fluid bg-3 text-center"> -->
+        <!-- <h3 class="margin">About Section:</h3><br>
         <div class="row">
             <div class="col-sm-4">
                 <p>Search...</p>
                 <img src="beer.png" class="img-responsive margin" style="width:100%" alt="Image">
-
             </div>
             <div class="col-sm-4">
                 <p>Find...</p>
                 <img src="beer.png" class="img-responsive margin" style="width:100%" alt="Image">
-
             </div>
             <div class="col-sm-4">
                 <p>enjoy...</p>
                 <img src="beer.png" class="img-responsive margin" style="width:100%" alt="Image">
-
             </div>
-        </div>
-
+        </div> -->
         <!-- Footer -->
-        <footer class="container-fluid bg-4 text-center">
-            <p>Made By: our names </p>
+        <footer class="container-fluid bg-4 text-center" id="aboutTeam">
+            <p class="team">Meet the Team</p>
+            <div class="row">
+                <div class="col-sm-3">
+                    <p>Adrian Cervantes</p>
+                </div>
+                <div class="col-sm-3">
+                    <p>Fabio Ruiz</p>
+                </div>
+                <div class="col-sm-3">
+                    <p>Hunter Nix</p>
+                </div>
+                <div class="col-sm-3">
+                    <p>Tara Dick</p>
+                </div>
+            </div>
         </footer>
-        <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3SVRHtd9fyun6WGgFbLlKKnKGJ_9jl18&callback=initMap">
-            </script>
+        <!-- <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3SVRHtd9fyun6WGgFbLlKKnKGJ_9jl18&callback=initMap">-->
+
 
 
 
@@ -159,6 +125,6 @@
   <script type="text/javascript" src="assets/javascript/app.js"></script> 
 
 
-</body>
 
+</body>
 </html>
